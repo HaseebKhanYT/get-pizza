@@ -4,10 +4,10 @@ function handleSumbit(event) {
 
   errorNode.innerHTML = "";
   const name = document.getElementById("name").value;
-  const yearOfBirth = parseInt(document.getElementById("birth").value);
+  const yearOfBirth = document.getElementById("birth").value;
   const zipcode = document.getElementById("zipcode").value;
   const password = document.getElementById("password").value;
-  const pizzaChoice = document.getElementById("pizzaChoice");
+  const pizzaChoice = document.getElementById("pizzaChoice").value;
 
   let errors = false;
 
@@ -16,7 +16,7 @@ function handleSumbit(event) {
     errors = true;
   }
   console.log(yearOfBirth);
-  if (yearOfBirth <= 1900 || yearOfBirth >= 2100 || yearOfBirth == "") {
+  if (yearOfBirth <= 1900 || yearOfBirth >= 2100 || yearOfBirth == NaN) {
     setError("Year of birth must be between 1901 and 2099.");
     errors = true;
   }
@@ -44,8 +44,19 @@ function handleSumbit(event) {
   }
 }
 
+const usaCheckbox = document.querySelector("#usa");
+const zipcodeRequired = document.querySelector("#zip-required");
+
+usaCheckbox.addEventListener("change", () => {
+  if (usaCheckbox.checked == true) {
+    zipcodeRequired.classList.remove("d-none");
+  } else {
+    zipcodeRequired.classList.add("d-none");
+  }
+});
+
 // Setting Error
 function setError(message) {
   const errorNode = document.querySelector("#errormsg");
-  errorNode.insertAdjacentHTML("beforeend", message);
+  errorNode.insertAdjacentHTML("beforeend",` <div>${message}</div>`);
 }

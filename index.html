@@ -10,33 +10,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Get a Pizza</title>
+    <title>Get a Pizza | Papa Joe</title>
   </head>
   <body>
     <header>
-      <h1>Free Pizza!</h1>
+      <h1 class="white">Papa Joe's</h1>
     </header>
-    <main>
+    <main id="main">
       <form onsubmit="handleSumbit(event)">
         <fieldset class="form">
           <legend>Fill the form and get a Pizza</legend>
-          <label for="name"> Name: <span class="red" aria-label="required">*</span></label>
-          <input type="text" id="name" name="name"  />
+          <label for="name">
+            Name: <span class="red" aria-label="required">*</span></label
+          >
+          <input type="text" id="name" name="name" />
 
           <label for="birth">
-            Year of Birth: <span class="red" aria-label="required">*</span></label
+            Year of Birth:
+            <span class="red" aria-label="required">*</span></label
           >
           <input type="number" id="birth" name="birth" />
 
           <label for="usa">Do you live in the United States? </label>
           <input type="checkbox" name="usa" id="usa" />
 
-          <label for="zipcode">Enter your Zipcode: </label>
+          <label for="zipcode"
+            >Enter your Zipcode:
+            <span id="zip-required" class="red d-none" aria-label="required"
+              >*</span
+            >
+          </label>
           <input type="number" name="zipcode" id="zipcode" />
 
           <!-- <span class="validity"></span> -->
 
-          <label for="password"> Enter a password: </label>
+          <label for="password">
+            Enter a password:
+            <span class="red" aria-label="required">*</span></label
+          >
           <input type="password" name="password" id="password" />
 
           <label for="">Select your preference: </label>
@@ -54,7 +65,6 @@
                 type="radio"
                 name="pizzaChoice"
                 id="pizzaChoice"
-
                 aria-required="true"
               /><label>No Pineapple on Pizza EW!</label>
             </li>
@@ -63,7 +73,6 @@
                 type="radio"
                 name="pizzaChoice"
                 id="pizzaChoice"
-
                 aria-required="true"
               /><label>I HATE PIZZA!</label>
             </li>
@@ -78,7 +87,9 @@
         </fieldset>
       </form>
     </main>
-    <footer>Built by Haseeb Khan</footer>
+    <footer>Built by Haseeb Khan | Background Image by 
+      <a href="http://www.freepik.com">Sergey_Kandakov / Freepik</a>
+      </footer>
     <script src="script.js"></script>
   </body>
 </html>
