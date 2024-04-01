@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Get a Pizza</title>
+  </head>
+  <body>
+    <header>
+      <h1>Free Pizza!</h1>
+    </header>
+    <main>
+      <form onsubmit="handleSumbit(event)">
+        <fieldset class="form">
+          <legend>Fill the form and get a Pizza</legend>
+          <label for="name"> Name: <span class="red" aria-label="required">*</span></label>
+          <input type="text" id="name" name="name"  />
+
+          <label for="birth">
+            Year of Birth: <span class="red" aria-label="required">*</span></label
+          >
+          <input type="number" id="birth" name="birth" />
+
+          <label for="usa">Do you live in the United States? </label>
+          <input type="checkbox" name="usa" id="usa" />
+
+          <label for="zipcode">Enter your Zipcode: </label>
+          <input type="number" name="zipcode" id="zipcode" />
+
+          <!-- <span class="validity"></span> -->
+
+          <label for="password"> Enter a password: </label>
+          <input type="password" name="password" id="password" />
+
+          <label for="">Select your preference: </label>
+          <ul>
+            <li>
+              <input
+                type="radio"
+                name="pizzaChoice"
+                id="pizzaChoice"
+                aria-required="true"
+              /><label>Pineapple on Pizza</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="pizzaChoice"
+                id="pizzaChoice"
+
+                aria-required="true"
+              /><label>No Pineapple on Pizza EW!</label>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="pizzaChoice"
+                id="pizzaChoice"
+
+                aria-required="true"
+              /><label>I HATE PIZZA!</label>
+            </li>
+          </ul>
+          <section>
+            <p>
+              <input type="submit" value="Submit" />
+            </p>
+            <div id="errormsg"></div>
+            <div id="successmsg"></div>
+          </section>
+        </fieldset>
+      </form>
+    </main>
+    <footer>Built by Haseeb Khan</footer>
+    <script src="script.js"></script>
+  </body>
+</html>

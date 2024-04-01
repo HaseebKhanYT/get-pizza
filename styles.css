@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+ color: green;
+}
+
+/* Typography */
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#errormsg {
+  color: red;
+  padding: 1rem 0;
+}
+
+#successmsg {
+  color: green;
+  padding: 1rem 0;
+}
+
+
+ul{
+  padding: 0;
+}
+
+ul > li { 
+  text-decoration: none;
+  list-style: none;
+}
