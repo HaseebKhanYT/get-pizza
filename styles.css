@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -20,7 +22,6 @@ body {
   font-weight: 400;
   font-style: normal;
 
-
   background-image: url("pizza-background.jpeg");
   background-size: contain;
 }
@@ -29,6 +30,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  padding: 1rem 2rem;
+  a {
+    text-decoration: none;
+    color: white;
+    :visited {
+      color: white;
+    }
+  }
+}
+
+.footer {
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 0.5rem;
+  }
 }
 
 ul {
@@ -252,8 +273,8 @@ ul > li {
 
 /* Form */
 
-form{
-    /* From https://css.glass */
+form {
+  /* From https://css.glass */
   background: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -266,7 +287,7 @@ form{
   display: flex;
   flex-direction: column;
   color: white;
-  
+
   @media (min-width: 0px) {
     width: 300px;
   }
@@ -280,14 +301,52 @@ form{
     width: 700px;
   }
 
-
-
   border-radius: 16px;
   border: 0;
 }
 
 legend {
   font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 1.2rem;
+  }
+}
+
+.input {
+  padding: 0.3rem 0.3rem;
+  border-radius: 5px;
+  border: 0;
+  transition: 0.3s;
+}
+
+.input:focus {
+  box-shadow: 0 0 8px 0 rgb(201, 228, 255);
+  outline: none;
+}
+
+label {
+   margin-top: 1rem;
+}
+
+.button {
+  color: white;
+  padding: 1rem 2rem;
+  border: 0;
+  text-decoration: none;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 #errormsg {

@@ -15,7 +15,7 @@ function handleSumbit(event) {
     setError("Name must be at least 3 characters long.");
     errors = true;
   }
-  console.log(yearOfBirth);
+
   if (yearOfBirth <= 1900 || yearOfBirth >= 2100 || yearOfBirth == NaN) {
     setError("Year of birth must be between 1901 and 2099.");
     errors = true;
@@ -24,12 +24,16 @@ function handleSumbit(event) {
   let livesInUS = document.getElementById("usa").checked;
 
   if (livesInUS && zipcode.length != 5) {
-    console.log(zipcode);
     setError("Zipcode must be a 5 digit number.");
     errors = true;
   }
 
-  if (password.length < 8) {
+  if (password.length == 0) {
+    setError("Please enter a password.");
+    errors = true;
+  }
+
+  else if (password.length < 8) {
     setError("Password must be at least 8 characters long.");
     errors = true;
   }
@@ -55,8 +59,7 @@ usaCheckbox.addEventListener("change", () => {
   }
 });
 
-// Setting Error
 function setError(message) {
   const errorNode = document.querySelector("#errormsg");
-  errorNode.insertAdjacentHTML("beforeend",` <div>${message}</div>`);
+  errorNode.insertAdjacentHTML("beforeend", ` <div>${message}</div>`);
 }

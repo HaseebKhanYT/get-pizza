@@ -10,29 +10,34 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Get a Pizza | Papa Joe</title>
+    <title>Get a Pizza | Papa Joe's</title>
   </head>
   <body>
     <header>
-      <h1 class="white">Papa Joe's</h1>
+      <h1 class="white">Papa Joe's Pizzeria</h1>
     </header>
     <main id="main">
       <form onsubmit="handleSumbit(event)">
         <fieldset class="form">
-          <legend>Fill the form and get a Pizza</legend>
+          <legend>Fill the form and get a Pizza!</legend>
           <label for="name">
             Name: <span class="red" aria-label="required">*</span></label
           >
-          <input type="text" id="name" name="name" />
+          <input class="input" type="text" id="name" name="name" />
 
           <label for="birth">
             Year of Birth:
             <span class="red" aria-label="required">*</span></label
           >
-          <input type="number" id="birth" name="birth" />
+          <input class="input" type="number" id="birth" name="birth" />
 
           <label for="usa">Do you live in the United States? </label>
-          <input type="checkbox" name="usa" id="usa" />
+          <div class="group">
+            <input class="input" type="checkbox" name="usa" id="usa" />
+            Yes
+            <input class="input" type="checkbox" name="nousa" id="nousa" />
+            No
+          </div>
 
           <label for="zipcode"
             >Enter your Zipcode:
@@ -40,7 +45,7 @@
               >*</span
             >
           </label>
-          <input type="number" name="zipcode" id="zipcode" />
+          <input class="input" type="number" name="zipcode" id="zipcode" />
 
           <!-- <span class="validity"></span> -->
 
@@ -48,12 +53,12 @@
             Enter a password:
             <span class="red" aria-label="required">*</span></label
           >
-          <input type="password" name="password" id="password" />
+          <input class="input" type="password" name="password" id="password" />
 
           <label for="">Select your preference: </label>
           <ul>
             <li>
-              <input
+              <input class="input"
                 type="radio"
                 name="pizzaChoice"
                 id="pizzaChoice"
@@ -62,6 +67,7 @@
             </li>
             <li>
               <input
+              class="input"
                 type="radio"
                 name="pizzaChoice"
                 id="pizzaChoice"
@@ -70,6 +76,7 @@
             </li>
             <li>
               <input
+              class="input"
                 type="radio"
                 name="pizzaChoice"
                 id="pizzaChoice"
@@ -77,19 +84,16 @@
               /><label>I HATE PIZZA!</label>
             </li>
           </ul>
-          <section>
-            <p>
-              <input type="submit" value="Submit" />
-            </p>
-            <div id="errormsg"></div>
-            <div id="successmsg"></div>
-          </section>
+          <input class="button" type="submit" value="Submit" />
+          <div id="errormsg"></div>
+          <div id="successmsg"></div>
         </fieldset>
       </form>
     </main>
-    <footer>Built by Haseeb Khan | Background Image by 
-      <a href="http://www.freepik.com">Sergey_Kandakov / Freepik</a>
-      </footer>
+    <footer class="footer white d-flex">
+      Built by Haseeb Khan | Background Image by &nbsp;
+      <a href="http://www.freepik.com">Sergey Kandakov / Freepik</a>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
